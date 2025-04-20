@@ -16,4 +16,4 @@ RUN sed -i 's/#Port 22/Port 2025/' /etc/ssh/sshd_config && \
 
 EXPOSE 2025
 
-CMD ["/usr/sbin/sshd", "-D"]
+CMD service ssh start && tail -f /dev/null
